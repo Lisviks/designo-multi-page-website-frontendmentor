@@ -1,0 +1,49 @@
+@import '_variables';
+
+.hero {
+  height: 84.3rem;
+  overflow: hidden;
+  background-color: $primary-peach;
+  position: relative;
+
+  .content {
+    margin: 8rem 2.4rem 35rem;
+    text-align: center;
+    color: $primary-white;
+
+    h1 {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+    }
+
+    p {
+      margin: 1.4rem 0 2.4rem;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 62.4rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+  }
+
+  .bgPattern {
+    position: absolute;
+    width: 64rem;
+    height: 64rem;
+    top: 10.2rem;
+    left: 0;
+  }
+}

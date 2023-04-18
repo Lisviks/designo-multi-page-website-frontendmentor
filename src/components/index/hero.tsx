@@ -1,20 +1,22 @@
 import Image from 'next/image';
+import styles from '@/styles/hero.module.scss';
+import sharedStyles from '@/styles/shared.module.scss';
 
 export default function Hero() {
   return (
-    <section className='hero'>
-      <div className='content'>
+    <section className={styles.hero}>
+      <div className={styles.content}>
         <h1>Award-winning custom designs and digital branding solutions</h1>
         <p>
           With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and
           engaging brand experiences. Find out more about our services.
         </p>
-        <button className='btn'>Learn more</button>
+        <button className={sharedStyles.btn}>Learn more</button>
       </div>
-      <div className='image'>
+      <div className={styles.image}>
         <Image src='/assets/home/desktop/image-hero-phone.png' alt='Phone image' height={573} width={375}></Image>
       </div>
-      <div className='bg-pattern'>
+      <div className={styles.bgPattern}>
         <svg width='640' height='639' xmlns='http://www.w3.org/2000/svg'>
           <defs>
             <linearGradient x1='0%' y1='50%' x2='100%' y2='50%' id='a'>

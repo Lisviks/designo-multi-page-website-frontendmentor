@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import styles from '@/styles/header.module.scss';
 
 export default function Header() {
   return (
-    <header>
-      <div className='logo'>
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <Image src='/assets/shared/desktop/logo-dark.png' alt='logo' height={27} width={202}></Image>
       </div>
       <svg width='24' height='20' xmlns='http://www.w3.org/2000/svg'>
