@@ -6,12 +6,21 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.get_in_touch}>
-        <h4>Let&apos;s talk about your project</h4>
-        <p>
-          Ready to take it to the next level? Contact us today and find out how our expertise can help your business
-          grow.
-        </p>
-        <button className={styles.btn}>Get in touch</button>
+        <div className={styles.content}>
+          <h4>Let&apos;s talk about your project</h4>
+          <p>
+            Ready to take it to the next level? Contact us today and find out how our expertise can help your business
+            grow.
+          </p>
+          <button className={styles.btn}>Get in touch</button>
+        </div>
+        <Image
+          src='assets/shared/desktop/footer-circles.svg'
+          alt='ds'
+          height={584}
+          width={876}
+          className={styles.bg_pattern}
+        />
       </div>
       <div className={styles.footer_header}>
         <div className={styles.logo}>

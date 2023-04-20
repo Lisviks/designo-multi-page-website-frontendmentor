@@ -35,7 +35,13 @@
     border-radius: 1.5rem;
     margin: 0 2.4rem;
     text-align: center;
-    background: url(../../public/assets/shared/desktop/bg-pattern-three-circles.svg), $primary-peach;
+    background-color: $primary-peach;
+    overflow: hidden;
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
 
     h4 {
       font-weight: 500;
@@ -49,6 +55,13 @@
       font-size: 1.5rem;
       line-height: 2.5rem;
       margin-bottom: 3.2rem;
+    }
+
+    .bg_pattern {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
