@@ -1,7 +1,9 @@
 @import '_variables';
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -30,7 +32,7 @@ body {
 
   .nav {
     position: absolute;
-  
+
     .nav-menu-list {
       height: 100%;
       width: 100%;
@@ -38,33 +40,34 @@ body {
       top: 9.7rem;
       left: 0;
       transition: all 0.3s ease;
-      
+      z-index: -1;
+
       &.active {
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 5;
-  
+
         .nav-menu {
           left: 0;
         }
       }
-  
+
       .nav-menu {
         padding: 4.8rem 2.4rem;
         background-color: $primary-black;
         position: relative;
         left: -200rem;
         transition: all 0.3s ease;
-  
+
         .nav-list {
           list-style: none;
-          
+
           li {
             margin-bottom: 3.2rem;
-  
+
             &:last-child {
               margin-bottom: 0;
             }
-  
+
             a {
               font-weight: 400;
               font-size: 2.4rem;

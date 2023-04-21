@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styles from '@/styles/header.module.scss';
 import { useState } from 'react';
 import Navbar from './Navbar';
 
