@@ -2,7 +2,7 @@ import styles from '@/styles/shared.module.scss';
 
 export default function SocialLinks() {
   return (
-    <ul className={styles.social_links}>
+    <ul className='social_links'>
       <li>
         <a href='#'>
           <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'>
