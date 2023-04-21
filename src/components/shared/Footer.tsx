@@ -1,6 +1,7 @@
 import styles from '@/styles/shared.module.scss';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -28,13 +29,13 @@ export default function Footer() {
         </div>
         <ul className='links'>
           <li>
-            <a href='#'>Our company</a>
+            <Link href='#'>Our company</Link>
           </li>
           <li>
-            <a href='#'>Locations</a>
+            <Link href='#'>Locations</Link>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <Link href='#'>Contact</Link>
           </li>
         </ul>
       </div>
