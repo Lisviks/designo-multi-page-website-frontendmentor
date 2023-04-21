@@ -1,17 +1,24 @@
 import Image from 'next/image';
 import styles from '@/styles/header.module.scss';
+import { useState } from 'react';
+import Navbar from './navbar';
 
 export default function Header() {
+  const [navActive, setNavActive] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
         <Image src='/assets/shared/desktop/logo-dark.png' alt='logo' height={27} width={202}></Image>
       </div>
-      <svg width='24' height='20' xmlns='http://www.w3.org/2000/svg'>
-        <g fill='#1D1C1E' fillRule='evenodd'>
-          <path d='M0 0h24v4H0zM0 8h24v4H0zM0 16h24v4H0z' />
-        </g>
-      </svg>
+      <div onClick={() => setNavActive(!navActive)} className={styles.nav_menu_icon}>
+        {navActive ? (
+          <Image src='assets/shared/mobile/icon-close.svg' alt='close menu' height={20} width={20} />
+        ) : (
+          <Image src='assets/shared/mobile/icon-hamburger.svg' alt='close menu' height={20} width={24} />
+        )}
+      </div>
+      <Navbar navActive={navActive} />
     </header>
   );
 }

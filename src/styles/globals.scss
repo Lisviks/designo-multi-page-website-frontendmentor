@@ -1,3 +1,4 @@
+@import '_variables';
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 
 *, *::before, *::after {
@@ -13,4 +14,56 @@ html {
 body {
   font-family: 'Jost', sans-serif;
   font-size: 1.6rem;
+}
+
+.nav {
+  position: absolute;
+
+  .nav-menu-list {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 9.7rem;
+    left: 0;
+    transition: all 0.3s ease;
+    
+    &.active {
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 5;
+
+      .nav-menu {
+        left: 0;
+      }
+    }
+
+    .nav-menu {
+      padding: 4.8rem 2.4rem;
+      background-color: $primary-black;
+      position: relative;
+      left: -200rem;
+      transition: all 0.3s ease;
+
+      .nav-list {
+        list-style: none;
+        
+        li {
+          margin-bottom: 3.2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            font-weight: 400;
+            font-size: 2.4rem;
+            line-height: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $primary-white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
