@@ -16,7 +16,7 @@ export default function Hero() {
       <div className={styles.image}>
         <Image src='/assets/home/desktop/image-hero-phone.png' alt='Phone image' height={573} width={375}></Image>
       </div>
-      <div className={styles.bgPattern}>
+      <div className={styles.bg_pattern}>
         <svg width='640' height='639' xmlns='http://www.w3.org/2000/svg'>
           <defs>
             <linearGradient x1='0%' y1='50%' x2='100%' y2='50%' id='a'>
