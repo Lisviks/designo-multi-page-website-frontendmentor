@@ -1,5 +1,5 @@
 import styles from '@/styles/index/section1.module.scss';
-import Card from './card';
+import Card from './Card';
 
 export default function Section1() {
   return (

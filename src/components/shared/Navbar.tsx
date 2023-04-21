@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import NavItem from './navItem';
+import NavItem from './NavItem';
 
 const MENU_LIST = [
   { text: 'Our Company', href: '/' },

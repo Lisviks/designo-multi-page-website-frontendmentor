@@ -1,8 +1,8 @@
-import Hero from '@/components/index/hero';
-import Section1 from '@/components/index/section1';
-import Section2 from '@/components/index/section2';
-import Footer from '@/components/shared/footer';
-import Header from '@/components/shared/header';
+import Hero from '@/components/index/Hero';
+import Section1 from '@/components/index/Section1';
+import Section2 from '@/components/index/Section2';
+import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/Header';
 import Head from 'next/head';
 
 export default function Home() {
