@@ -199,3 +199,128 @@ body {
     }
   }
 }
+
+@media (min-width: 768px) {
+  // HEADER
+
+  .header {
+    margin: 6.4rem 4rem;
+
+    .nav-menu-icon {
+      display: none;
+    }
+
+    .nav {
+      position: static;
+
+      .nav-menu-list {
+        position: static;
+
+        .nav-menu {
+          padding: 0;
+          background-color: unset;
+          position: static;
+
+          .nav-list {
+            display: flex;
+
+            li {
+              margin-bottom: 0;
+              margin-right: 4.2rem;
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              a {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: $secondary-dark-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // FOOTER
+
+  .footer {
+    margin-top: 33.1rem;
+    padding: 16.6rem 0 8rem;
+
+    .get_in_touch {
+      top: -26.4rem;
+      margin: 0 4rem;
+
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      h4 {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin: 0 auto 1rem;
+        width: 34rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        margin: 0 8rem 3.2rem;
+      }
+
+      .bg_pattern {
+        transform: translate(-43%, -50%);
+      }
+    }
+
+    .footer_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 0 4rem;
+
+      .logo {
+        padding-bottom: 0;
+        margin: 0;
+        border-bottom: none;
+      }
+
+      .links {
+        margin-top: 0;
+        display: flex;
+
+        li {
+          margin-bottom: 0;
+          margin-right: 4.2rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .footer_info {
+      margin: 3.1rem 4rem 0;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .contact_info {
+        margin-top: 0;
+        font-weight: 700;
+      }
+    }
+
+    .social_links {
+      margin: 0;
+    }
+  }
+}

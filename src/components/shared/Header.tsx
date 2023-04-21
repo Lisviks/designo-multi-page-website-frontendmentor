@@ -10,7 +10,7 @@ export default function Header() {
       <div className='logo'>
         <Image src='/assets/shared/desktop/logo-dark.png' alt='logo' height={27} width={202}></Image>
       </div>
-      <div onClick={() => setNavActive(!navActive)} className='nav_menu_icon'>
+      <div onClick={() => setNavActive(!navActive)} className='nav-menu-icon'>
         {navActive ? (
           <Image src='assets/shared/mobile/icon-close.svg' alt='close menu' height={20} width={20} />
         ) : (
