@@ -26,9 +26,9 @@ export default function Footer() {
         />
       </div>
       <div className='footer_header'>
-        <div className='logo'>
+        <Link href='/' className='logo'>
           <Image src='/assets/shared/desktop/logo-light.png' alt='logo' height={27} width={202} />
-        </div>
+        </Link>
         <ul className='links'>
           <li>
             <Link href='#'>Our company</Link>
