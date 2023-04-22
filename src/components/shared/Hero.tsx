@@ -1,6 +1,11 @@
 import styles from '@/styles/web-design/hero.module.scss';
 
-export default function Hero() {
+interface Props {
+  title: string;
+  text: string;
+}
+
+export default function Hero({ title, text }: Props) {
   return (
     <section className={styles.hero}>
       <div className={styles.bg_pattern}>
@@ -21,8 +26,8 @@ export default function Hero() {
         </svg>
       </div>
       <div className={styles.content}>
-        <h1>Web Design</h1>
-        <p>We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
+        <h1>{title}</h1>
+        <p>{text}</p>
       </div>
     </section>
   );

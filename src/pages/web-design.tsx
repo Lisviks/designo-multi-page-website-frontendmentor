@@ -1,6 +1,6 @@
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
-import Hero from '@/components/web-design/Hero';
+import Hero from '@/components/shared/Hero';
 import Section1 from '@/components/web-design/Section1';
 import Section2 from '@/components/web-design/Section2';
 import Head from 'next/head';
@@ -17,7 +17,10 @@ export default function Home() {
       <main>
         <div className='leaf_bg_pattern' style={{ top: '28.1rem' }}></div>
         <Header />
-        <Hero />
+        <Hero
+          title='Web Design'
+          text='We build websites that serve as powerful marketing tools and bring memorable brand experiences.'
+        />
         <Section1 />
         <Section2 />
         <Footer />
