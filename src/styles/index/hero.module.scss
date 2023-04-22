@@ -79,3 +79,37 @@
     }
   }
 }
+
+@media (min-width: 1000px) {
+  .hero {
+    max-width: 111rem;
+    height: 64rem;
+    margin: 0 auto;
+
+    .content {
+      width: 54rem;
+      margin: 14.5rem auto 14.5rem 9.5rem;
+      text-align: left;
+
+      p {
+        width: 44.5rem;
+        margin: 1.1rem 0 4rem;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+    }
+
+    .image {
+      top: -3rem;
+      left: unset;
+      transform: translateX(0);
+      right: -8rem;
+    }
+
+    .bg_pattern {
+      top: 0;
+      left: unset;
+      right: 0;
+    }
+  }
+}
