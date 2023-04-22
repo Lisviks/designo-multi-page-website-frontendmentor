@@ -1,11 +1,10 @@
-import styles from '@/styles/index/section1.module.scss';
 import LinkCard from '../shared/LinkCard';
+import styles from '@/styles/web-design/section2.module.scss';
 
-export default function Section1() {
+export default function Section2() {
   return (
     <section className={styles.section}>
       <LinkCard title='Web Design' link='web-design' />
-      <LinkCard title='App Design' link='app-design' />
       <LinkCard title='Graphic Design' link='graphic-design' />
     </section>
   );

@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image';
-import Card from './Card';
+import Card from '../Card';
 import styles from '@/styles/shared/design-pages/section1.module.scss';
 
 interface CardData {
