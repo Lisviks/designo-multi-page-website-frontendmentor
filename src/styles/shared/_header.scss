@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  margin: 3.5rem 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    height: 2.7rem;
+  }
+
+  .nav {
+    position: absolute;
+
+    .nav-menu-list {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 9.7rem;
+      left: 0;
+      transition: all 0.3s ease;
+      z-index: -1;
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+
+        .nav-menu {
+          left: 0;
+        }
+      }
+
+      .nav-menu {
+        padding: 4.8rem 2.4rem;
+        background-color: $primary-black;
+        position: relative;
+        left: -200rem;
+        transition: all 0.3s ease;
+
+        .nav-list {
+          list-style: none;
+
+          li {
+            margin-bottom: 3.2rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              font-weight: 400;
+              font-size: 2.4rem;
+              line-height: 2.5rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              color: $primary-white;
+              text-decoration: none;
+              position: relative;
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                left: 0;
+                border-bottom: 1px solid $secondary-dark-grey;
+                width: 0;
+                transition: width 0.2s ease;
+              }
+
+              &:hover::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 6.4rem 4rem;
+
+    .nav-menu-icon {
+      display: none;
+    }
+
+    .nav {
+      position: static;
+
+      .nav-menu-list {
+        position: static;
+
+        .nav-menu {
+          padding: 0;
+          background-color: unset;
+          position: static;
+
+          .nav-list {
+            display: flex;
+
+            li {
+              margin-bottom: 0;
+              margin-right: 4.2rem;
+
+              &:last-child {
+                margin-right: 0;
+              }
+
+              a {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                color: $secondary-dark-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    margin: 6.4rem auto;
+    max-width: 111rem;
+  }
+}
