@@ -6,7 +6,6 @@ import FriendlySvg from './FriendlySvg';
 export default function Section2() {
   return (
     <section className={styles.section}>
-      <div className={styles.bg_pattern}></div>
       <div>
         <div className={styles.illustration}>
           <div className={styles.circle}></div>

@@ -18,6 +18,24 @@ body {
   font-size: 1.6rem;
 }
 
+main .leaf_bg_pattern {
+  position: absolute;
+  top: 47.5rem;
+  left: 0rem;
+  z-index: -1;
+  width: 100.6rem;
+  height: 59.4rem;
+  background: url('../../public/assets/shared/desktop/bg-pattern-leaf.svg');
+  background-repeat: no-repeat;
+
+  &:nth-of-type(2) {
+    top: 187.9rem;
+    left: unset;
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
+
 // HEADER
 
 .header {

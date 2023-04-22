@@ -15,6 +15,8 @@ export default function Home() {
         <link rel='icon' href='/assets/favicon-32x32.png' />
       </Head>
       <main>
+        <div className='leaf_bg_pattern'></div>
+        <div className='leaf_bg_pattern'></div>
         <Header />
         <Hero />
         <Section1 />
