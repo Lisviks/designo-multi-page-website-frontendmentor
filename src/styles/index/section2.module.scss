@@ -1,7 +1,7 @@
 @import '../variables';
 
 .section {
-  margin: 0 2.4rem;
+  margin: 0 2.4rem 31.1rem;
   text-align: center;
   color: $secondary-dark-grey;
 
@@ -64,7 +64,7 @@
 
 @media (min-width: 768px) {
   .section {
-    margin: 0 4rem;
+    margin: 0 4rem 33.1rem;
     text-align: left;
 
     & > div {
@@ -87,24 +87,10 @@
 @media (min-width: 1000px) {
   .section {
     max-width: 111rem;
-    margin: 0 auto;
+    margin: 0 auto 38rem;
     text-align: center;
     display: flex;
     position: relative;
-
-    // .bg_pattern {
-    //   display: block;
-    //   position: absolute;
-    //   top: 12.4rem;
-    //   left: 26.9rem;
-    //   z-index: -1;
-    //   width: 100.6rem;
-    //   height: 59.4rem;
-    //   background: url('../../../public/assets/shared/desktop/bg-pattern-leaf.svg');
-    //   background-repeat: no-repeat;
-    //   transform: rotate(180deg);
-    //   margin: 0;
-    // }
 
     & > div {
       margin-bottom: 0;

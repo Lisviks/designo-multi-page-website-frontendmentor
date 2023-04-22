@@ -1,5 +1,11 @@
 .section {
-  margin: 0 2.4rem;
+  margin: 0 2.4rem 28.6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: 38.4rem;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -9,7 +15,7 @@
     grid-template-rows: 30.8rem;
     gap: 3rem;
     max-width: 111rem;
-    margin: 0 auto;
+    margin: 0 auto 38rem;
 
     a {
       height: 30.8rem;
