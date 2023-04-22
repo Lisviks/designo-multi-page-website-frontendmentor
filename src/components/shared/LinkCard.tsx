@@ -7,7 +7,7 @@ interface Props {
   link: string;
 }
 
-export default function Card(props: Props) {
+export default function LinkCard(props: Props) {
   return (
     <Link href={props.link} className={styles.card}>
       <div>
