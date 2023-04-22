@@ -9,12 +9,14 @@ interface Props {
 
 export default function Card(props: Props) {
   return (
-    <div className={styles.card}>
-      <h2>{props.title}</h2>
-      <Link href={props.link}>
-        View Project
-        <Image src='/assets/shared/desktop/arrow-right.svg' alt='arrow to the right' height={8} width={4} />
-      </Link>
-    </div>
+    <Link href={props.link} className={styles.card}>
+      <div>
+        <h2>{props.title}</h2>
+        <p>
+          View Project
+          <Image src='/assets/shared/desktop/arrow-right.svg' alt='arrow to the right' height={8} width={4} />
+        </p>
+      </div>
+    </Link>
   );
 }

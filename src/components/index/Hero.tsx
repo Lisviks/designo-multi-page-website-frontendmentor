@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from '@/styles/index/hero.module.scss';
 import sharedStyles from '@/styles/shared.module.scss';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -11,7 +12,9 @@ export default function Hero() {
           With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and
           engaging brand experiences. Find out more about our services.
         </p>
-        <button className={sharedStyles.btn}>Learn more</button>
+        <Link href='#'>
+          <button className={sharedStyles.btn}>Learn more</button>
+        </Link>
       </div>
       <div className={styles.image}>
         <Image src='/assets/home/desktop/image-hero-phone.png' alt='Phone image' height={573} width={375}></Image>

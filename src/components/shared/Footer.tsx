@@ -13,7 +13,9 @@ export default function Footer() {
             Ready to take it to the next level? Contact us today and find out how our expertise can help your business
             grow.
           </p>
-          <button className={styles.btn}>Get in touch</button>
+          <Link href='#'>
+            <button className={styles.btn}>Get in touch</button>
+          </Link>
         </div>
         <Image
           src='assets/shared/desktop/footer-circles.svg'

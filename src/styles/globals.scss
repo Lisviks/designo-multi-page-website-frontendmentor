@@ -76,6 +76,21 @@ body {
               text-transform: uppercase;
               color: $primary-white;
               text-decoration: none;
+              position: relative;
+
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                left: 0;
+                border-bottom: 1px solid $secondary-dark-grey;
+                width: 0;
+                transition: width 0.2s ease;
+              }
+
+              &:hover::after {
+                width: 100%;
+              }
             }
           }
         }
@@ -158,6 +173,21 @@ body {
           text-transform: uppercase;
           color: $primary-white;
           text-decoration: none;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            border-bottom: 1px solid $primary-white;
+            width: 0;
+            transition: width 0.2s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+          }
         }
       }
     }
@@ -195,6 +225,15 @@ body {
 
       &:last-child {
         margin-right: 0;
+      }
+
+      svg {
+        fill: $primary-peach;
+        transition: fill 0.2s ease;
+      }
+
+      &:hover svg {
+        fill: $secondary-light-peach;
       }
     }
   }
@@ -366,7 +405,7 @@ body {
         height: 7.8rem;
       }
 
-      button {
+      a {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         align-self: center;
