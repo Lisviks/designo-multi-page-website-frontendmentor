@@ -9,7 +9,7 @@ interface Props {
 
 export default function LinkCard(props: Props) {
   return (
-    <Link href={props.link} className={styles.card}>
+    <Link href={props.link} className='link-card'>
       <div>
         <h2>{props.title}</h2>
         <p>
