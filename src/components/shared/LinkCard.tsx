@@ -1,4 +1,3 @@
-import styles from '@/styles/index/section1.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 

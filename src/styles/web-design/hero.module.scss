@@ -1,0 +1,76 @@
+@import '../variables';
+
+.hero {
+  background-color: $primary-peach;
+  color: $primary-white;
+  text-align: center;
+  padding: 10.5rem 2.4rem;
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .bg_pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 6.4rem 2.4rem;
+    margin: 0 4rem;
+    border-radius: 1.5rem;
+
+    .content {
+      max-width: 40rem;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+    }
+
+    .bg_pattern {
+      top: 50%;
+      right: -16.5rem;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    max-width: 111rem;
+    margin: 0 auto;
+
+    .bg_pattern {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
