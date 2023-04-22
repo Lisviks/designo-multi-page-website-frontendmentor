@@ -1,4 +1,4 @@
-import styles from '@/styles/web-design/hero.module.scss';
+import styles from '@/styles/shared/design-pages/hero.module.scss';
 
 interface Props {
   title: string;
