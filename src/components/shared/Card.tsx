@@ -10,7 +10,7 @@ export default function Card({ image, title, text }: Props) {
   return (
     <div className='card'>
       <div className='image'>
-        <Image src={image.src} alt={`${title} image`} height={image.height} width={image.width} />
+        <Image src={image} alt={`${title} image`} />
       </div>
       <div className='content'>
         <h3>{title}</h3>
