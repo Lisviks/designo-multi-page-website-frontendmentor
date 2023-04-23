@@ -6,25 +6,17 @@ interface Props {
 }
 
 export default function Hero({ title, text }: Props) {
+  const getBgPattern = () => {
+    const pageTitle = title.split(' ')[0].toLowerCase();
+
+    if (pageTitle === 'web') return <div className={styles.web_bg_pattern}></div>;
+    if (pageTitle === 'app') return <div className={styles.app_bg_pattern}></div>;
+    if (pageTitle === 'graphic') return <div className={styles.graphic_bg_pattern}></div>;
+  };
+
   return (
     <section className={styles.hero}>
-      <div className={styles.bg_pattern}>
-        <svg width='876' height='584' xmlns='http://www.w3.org/2000/svg'>
-          <defs>
-            <linearGradient x1='0%' y1='50%' x2='100%' y2='50%' id='a'>
-              <stop stopColor='#5D0202' stopOpacity='0' offset='0%' />
-              <stop stopColor='#5D0202' stopOpacity='.498' offset='100%' />
-            </linearGradient>
-          </defs>
-          <g transform='matrix(1 0 0 -1 0 584)' fill='url(#a)' fillRule='evenodd' opacity='.309'>
-            <circle transform='matrix(0 -1 -1 0 1168 1168)' cx='730' cy='438' r='146' />
-            <circle transform='matrix(-1 0 0 1 876 0)' cx='438' cy='438' r='146' />
-            <circle transform='matrix(0 1 1 0 -292 292)' cx='146' cy='438' r='146' />
-            <circle transform='matrix(0 -1 -1 0 876 876)' cx='730' cy='146' r='146' />
-            <circle transform='matrix(-1 0 0 1 876 0)' cx='438' cy='146' r='146' />
-          </g>
-        </svg>
-      </div>
+      {getBgPattern()}
       <div className={styles.content}>
         <h1>{title}</h1>
         <p>{text}</p>

@@ -26,7 +26,13 @@
     }
   }
 
-  .bg_pattern {
+  .web_bg_pattern,
+  .app_bg_pattern,
+  .graphic_bg_pattern {
+    height: 58.4rem;
+    width: 87.6rem;
+    background: url('../../../../public/assets/web-design/desktop/bg-pattern-intro-web.svg');
+    background-repeat: no-repeat !important;
     position: absolute;
     top: 0;
     right: 0;
@@ -54,7 +60,9 @@
       }
     }
 
-    .bg_pattern {
+    .web_bg_pattern,
+    .app_bg_pattern,
+    .graphic_bg_pattern {
       top: 50%;
       right: -16.5rem;
       transform: translateY(-50%);
@@ -67,10 +75,18 @@
     max-width: 111rem;
     margin: 0 auto;
 
-    .bg_pattern {
-      top: 50%;
+    .web_bg_pattern {
       right: 0;
-      transform: translateY(-50%);
+    }
+
+    .app_bg_pattern {
+      background: url('../../../../public/assets/app-design/desktop/bg-pattern-intro-app.svg');
+      right: 29.3rem;
+    }
+
+    .graphic_bg_pattern {
+      background: url('../../../../public/assets/graphic-design/desktop/bg-pattern-intro-graphic.svg');
+      right: 29.3rem;
     }
   }
 }
