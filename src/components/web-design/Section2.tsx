@@ -4,8 +4,8 @@ import styles from '@/styles/web-design/section2.module.scss';
 export default function Section2() {
   return (
     <section className={styles.section}>
-      <LinkCard title='App Design' link='app-design' />
-      <LinkCard title='Graphic Design' link='graphic-design' />
+      <LinkCard title='App Design' link='app-design' class='app' />
+      <LinkCard title='Graphic Design' link='graphic-design' class='graphic' />
     </section>
   );
 }
