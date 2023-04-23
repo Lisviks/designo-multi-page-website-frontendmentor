@@ -1,0 +1,133 @@
+@import '../variables';
+
+.worldClassCard,
+.realDealCard {
+  .image {
+    height: 32rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    padding: 8rem 2.4rem;
+    text-align: center;
+    background-color: #fdf3f0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    .bg_pattern {
+      height: 58.4rem;
+      width: 58.4rem;
+      background: url('../../../public/assets/shared/desktop/bg-pattern-three-circles.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+      color: $primary-peach;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: $secondary-dark-grey;
+      margin-bottom: 2.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .worldClassCard,
+  .realDealCard {
+    margin: 12rem 4rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    .content {
+      padding: 6.8rem 5.8rem;
+
+      .bg_pattern {
+        top: 10.8rem;
+        left: 9.4rem;
+      }
+
+      h3 {
+        font-size: 4rem;
+        line-height: 4.8rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .worldClassCard,
+  .realDealCard {
+    max-width: 111rem;
+    margin: 16rem auto;
+    display: grid;
+    grid-template-columns: 1.74fr 2.33fr;
+
+    .image {
+      height: 64rem;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .content {
+      padding: 15.4rem 9.6rem;
+      text-align: left;
+
+      .bg_pattern {
+        top: 5.6rem;
+        left: unset;
+        right: 19.7rem;
+      }
+    }
+  }
+
+  .realDealCard {
+    grid-template-columns: 2.33fr 1.74fr;
+
+    .image {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .content {
+      .bg_pattern {
+        height: 29.2rem;
+        width: 58.4rem;
+        background: url('../../../public/assets/shared/desktop/bg-pattern-two-circles.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: unset;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+}

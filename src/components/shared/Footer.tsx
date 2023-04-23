@@ -31,7 +31,7 @@ export default function Footer() {
         </Link>
         <ul className='links'>
           <li>
-            <Link href='#'>Our company</Link>
+            <Link href='about'>Our company</Link>
           </li>
           <li>
             <Link href='#'>Locations</Link>

@@ -1,0 +1,116 @@
+@import '../variables';
+
+.hero {
+  background-color: $primary-peach;
+  color: $primary-white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .hero_image {
+    background: url('../../../public/assets/about/mobile/image-about-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 32rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bg_pattern {
+    width: 87.6rem;
+    height: 94.6rem;
+    background: url('../../../public/assets/about/mobile/bg-pattern-hero-about-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 18rem;
+    right: 0;
+  }
+
+  .content {
+    padding: 8rem 2.4rem;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    margin: 7.1rem 4rem 0;
+    border-radius: 1.5rem;
+
+    .hero_image {
+      background: url('../../../public/assets/about/tablet/image-about-hero.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bg_pattern {
+      width: 64rem;
+      height: 64rem;
+      background: url('../../../public/assets/about/desktop/bg-pattern-hero-about-desktop.svg');
+      top: -10.9rem;
+      right: 17rem;
+    }
+
+    .content {
+      padding: 6.4rem 5.8rem;
+
+      h1 {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        margin-bottom: 3.2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    margin: 6.4rem auto 0;
+    max-width: 111rem;
+    display: grid;
+    grid-template-columns: 2.33fr 1.74fr;
+    grid-template-rows: 48rem;
+
+    .hero_image {
+      height: 100%;
+      background: url('../../../public/assets/about/desktop/image-about-hero.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-column: 2 / 3;
+    }
+
+    .bg_pattern {
+      top: unset;
+      right: unset;
+      left: 0;
+      bottom: 0;
+    }
+
+    .content {
+      padding: 13.5rem 9.5rem;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      text-align: left;
+    }
+  }
+}

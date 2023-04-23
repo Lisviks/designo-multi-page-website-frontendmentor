@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import NavItem from './NavItem';
 
 const MENU_LIST = [
-  { text: 'Our Company', href: '/' },
+  { text: 'Our Company', href: 'about' },
   { text: 'Locations', href: '/' },
   { text: 'Contact', href: '/' },
 ];
