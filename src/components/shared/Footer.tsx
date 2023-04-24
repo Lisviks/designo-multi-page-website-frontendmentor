@@ -34,7 +34,7 @@ export default function Footer() {
             <Link href='about'>Our company</Link>
           </li>
           <li>
-            <Link href='#'>Locations</Link>
+            <Link href='locations'>Locations</Link>
           </li>
           <li>
             <Link href='#'>Contact</Link>

@@ -3,7 +3,7 @@ import NavItem from './NavItem';
 
 const MENU_LIST = [
   { text: 'Our Company', href: 'about' },
-  { text: 'Locations', href: '/' },
+  { text: 'Locations', href: 'locations' },
   { text: 'Contact', href: '/' },
 ];
 

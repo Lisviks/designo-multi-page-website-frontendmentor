@@ -1,0 +1,13 @@
+.section {
+  margin-bottom: 31rem;
+
+  & > div:nth-child(2) {
+    & > div:first-child {
+      grid-column: 1 / 2;
+    }
+
+    & > div:last-child {
+      grid-column: 2 / 4;
+    }
+  }
+}
