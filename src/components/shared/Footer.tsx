@@ -3,9 +3,15 @@ import Image from 'next/image';
 import SocialLinks from './SocialLinks';
 import Link from 'next/link';
 
-export default function Footer() {
+interface Props {
+  isContactPage?: boolean;
+}
+
+export default function Footer(props: Props) {
+  const { isContactPage = false } = props;
+
   return (
-    <footer className='footer'>
+    <footer className={`footer ${isContactPage ? 'contact_page' : ''}`}>
       <div className='get_in_touch'>
         <div className='content'>
           <h4>Let&apos;s talk about your project</h4>
@@ -13,7 +19,7 @@ export default function Footer() {
             Ready to take it to the next level? Contact us today and find out how our expertise can help your business
             grow.
           </p>
-          <Link href='#'>
+          <Link href='contact'>
             <button className={styles.btn}>Get in touch</button>
           </Link>
         </div>
@@ -37,7 +43,7 @@ export default function Footer() {
             <Link href='locations'>Locations</Link>
           </li>
           <li>
-            <Link href='#'>Contact</Link>
+            <Link href='contact'>Contact</Link>
           </li>
         </ul>
       </div>

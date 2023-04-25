@@ -4,7 +4,7 @@ import NavItem from './NavItem';
 const MENU_LIST = [
   { text: 'Our Company', href: 'about' },
   { text: 'Locations', href: 'locations' },
-  { text: 'Contact', href: '/' },
+  { text: 'Contact', href: 'contact' },
 ];
 
 const Navbar = ({ navActive }: { navActive: boolean }) => {

@@ -1,0 +1,218 @@
+@import '../variables';
+
+.form_section {
+  padding: 7.2rem 2.4rem;
+  background-color: $primary-peach;
+  color: $primary-white;
+  position: relative;
+  overflow: hidden;
+
+  .content {
+    text-align: center;
+    margin-bottom: 4.8rem;
+    position: relative;
+    z-index: 1;
+
+    h1 {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .form {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .input_field {
+      position: relative;
+      margin-bottom: 1.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        opacity: 0.5;
+        position: absolute;
+        top: 50%;
+        left: 1.4rem;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+      }
+
+      input,
+      textarea {
+        border: none;
+        border-bottom: 1px solid $primary-white;
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        color: $primary-white;
+        width: 100%;
+        padding: 1.1rem 1.4rem;
+
+        &:focus {
+          outline: none;
+          border-bottom-width: 2px;
+
+          & ~ label {
+            transform: translateY(-150%);
+          }
+        }
+      }
+
+      textarea {
+        resize: none;
+        height: 10rem;
+
+        & ~ label {
+          top: 2.5rem;
+        }
+
+        &:focus ~ label {
+          transform: translateY(-4rem);
+        }
+      }
+    }
+
+    .btn {
+      height: 5.6rem;
+      width: 15.2rem;
+      border: none;
+      border-radius: 0.8rem;
+      background-color: $primary-white;
+      color: $secondary-dark-grey;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $secondary-light-peach;
+        color: $primary-white;
+      }
+    }
+  }
+
+  .bg_pattern {
+    height: 99rem;
+    width: 87.6rem;
+    position: absolute;
+    top: 0;
+    left: -9.2rem;
+    background: url('../../../public/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 768px) {
+  .form_section {
+    padding: 7.1rem 5.8rem;
+    margin: 0 4rem;
+    border-radius: 1.5rem;
+
+    .content {
+      text-align: left;
+      margin-bottom: 3.2rem;
+
+      h1 {
+        font-size: 4.8rem;
+        line-height: 4.8rem;
+        margin-bottom: 3.2rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+      }
+    }
+
+    .form {
+      text-align: right;
+
+      .input_field {
+        margin-bottom: 2rem;
+
+        label {
+          left: 2.4rem;
+        }
+
+        input,
+        textarea {
+          padding: 1.1rem 2.4rem;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 2.4rem !important;
+    }
+
+    .bg_pattern {
+      height: 64rem;
+      width: 64rem;
+      top: -8.3rem;
+      left: -12.1rem;
+      background: url('../../../public/assets/home/desktop/bg-pattern-hero-home.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .form_section {
+    max-width: 111rem;
+    margin: 0 auto;
+    padding: 5.5rem 9.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    .content {
+      margin-top: 10rem;
+      margin-bottom: 0;
+      width: 45rem;
+    }
+
+    .form {
+      width: 38rem;
+
+      .input_field {
+        label {
+          left: 1.6rem;
+        }
+
+        input,
+        textarea {
+          padding: 1.1rem 1.6rem;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 2.4rem !important;
+    }
+
+    .bg_pattern {
+      top: -16rem;
+      left: 0;
+    }
+  }
+}

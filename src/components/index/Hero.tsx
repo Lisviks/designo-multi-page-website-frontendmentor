@@ -12,7 +12,7 @@ export default function Hero() {
           With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and
           engaging brand experiences. Find out more about our services.
         </p>
-        <Link href='#'>
+        <Link href='about'>
           <button className={sharedStyles.btn}>Learn more</button>
         </Link>
       </div>
