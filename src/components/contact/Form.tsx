@@ -1,6 +1,6 @@
 import styles from '@/styles/contact/form.module.scss';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import errorIcon from '@/../public/assets/contact/desktop/icon-error.svg';
 
 export default function Form() {
@@ -8,6 +8,7 @@ export default function Form() {
   const [isEmailEmpty, setIsEmailEmpty] = useState(false);
   const [isPhoneEmpty, setIsPhoneEmpty] = useState(false);
   const [isMessageEmpty, setIsMessageEmpty] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   const handleChange = (
     e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
@@ -26,6 +27,22 @@ export default function Form() {
     }
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const target = e.target as typeof e.target & {
+      name: { value: string };
+      email: { value: string };
+      phone: { value: string };
+      message: { value: string };
+    };
+
+    console.log(`Name: ${target.name.value}`);
+    console.log(`Email: ${target.email.value}`);
+    console.log(`Phone: ${target.phone.value}`);
+    console.log(`Message: ${target.message.value}`);
+  };
+
   return (
     <section className={styles.form_section}>
       <div className={styles.content}>
@@ -36,24 +53,24 @@ export default function Form() {
           line.
         </p>
       </div>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.input_field}>
-          <input type='text' id='name' onChange={(e) => handleChange(e, setIsNameEmpty)} />
+          <input type='text' id='name' onChange={(e) => handleChange(e, setIsNameEmpty)} required />
           <label htmlFor='name'>Name</label>
           {isNameEmpty && <ErrorMessage />}
         </div>
         <div className={styles.input_field}>
-          <input type='email' id='email' onChange={(e) => handleChange(e, setIsEmailEmpty)} />
+          <input type='email' id='email' onChange={(e) => handleChange(e, setIsEmailEmpty)} required />
           <label htmlFor='email'>Email Address</label>
           {isEmailEmpty && <ErrorMessage />}
         </div>
         <div className={styles.input_field}>
-          <input type='text' id='phone' onChange={(e) => handleChange(e, setIsPhoneEmpty)} />
+          <input type='text' id='phone' onChange={(e) => handleChange(e, setIsPhoneEmpty)} required />
           <label htmlFor='phone'>Phone</label>
           {isPhoneEmpty && <ErrorMessage />}
         </div>
         <div className={styles.input_field}>
-          <textarea id='message' onChange={(e) => handleChange(e, setIsMessageEmpty)}></textarea>
+          <textarea id='message' onChange={(e) => handleChange(e, setIsMessageEmpty)} required></textarea>
           <label htmlFor='message'>Your Message</label>
           {isMessageEmpty && <ErrorMessage />}
         </div>
