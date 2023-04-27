@@ -1,5 +1,4 @@
 import Card from '@/components/locations/Card';
-import { australiaMapImages, canadaMapImages, ukMapImages } from '@/components/locations/cardImages';
 import {
   australiaAddress,
   australiaContact,
@@ -27,9 +26,9 @@ export default function Home() {
         <div className='leaf_bg_pattern' style={{ top: '177.7rem', right: '-39.6rem' }}></div>
         <Header />
         <section className={styles.section}>
-          <Card title='Canada' address={canadaAddress} contact={canadaContact} images={canadaMapImages} />
-          <Card title='Australia' address={australiaAddress} contact={australiaContact} images={australiaMapImages} />
-          <Card title='United Kingdom' address={ukAddress} contact={ukContact} images={ukMapImages} />
+          <Card title='Canada' address={canadaAddress} contact={canadaContact} />
+          <Card title='Australia' address={australiaAddress} contact={australiaContact} />
+          <Card title='United Kingdom' address={ukAddress} contact={ukContact} />
         </section>
         <Footer />
       </main>
