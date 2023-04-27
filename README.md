@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [URL]()
-- Live Site URL: [URL](https://designo-multi-page-website-frontendmentor.vercel.app/contact)
+- Solution URL: [URL](https://www.frontendmentor.io/solutions/designo-website-Jw2b8rQ5ZO)
+- Live Site URL: [URL](https://designo-multi-page-website-frontendmentor.vercel.app/)
 
 ## My process
 
