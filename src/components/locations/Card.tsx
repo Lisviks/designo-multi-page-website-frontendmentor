@@ -19,7 +19,7 @@ export default function Card(props: Props) {
   const MapWithNoSSR = dynamic(() => import('@/components/locations/Map'), { ssr: false });
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} id={props.address.country.replace(' ', '')}>
       <div className={styles.image} id='map'>
         <MapWithNoSSR address={props.address} coords={props.coords} />
       </div>

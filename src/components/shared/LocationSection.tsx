@@ -15,7 +15,7 @@ export default function LocationSection() {
             <Image src={canada} alt='canada image' />
           </div>
           <p>Canada</p>
-          <Link href='#'>
+          <Link href='locations#Canada'>
             <button className={styles.btn}>See location</button>
           </Link>
         </li>
@@ -25,7 +25,7 @@ export default function LocationSection() {
             <Image src={australia} alt='austrlia image' />
           </div>
           <p>Australia</p>
-          <Link href='#'>
+          <Link href='locations#Australia'>
             <button className={styles.btn}>See location</button>
           </Link>
         </li>
@@ -35,7 +35,7 @@ export default function LocationSection() {
             <Image src={unitedKingdom} alt='unitedKingdom image' />
           </div>
           <p>United Kingdom</p>
-          <Link href='#'>
+          <Link href='locations#UnitedKingdom'>
             <button className={styles.btn}>See location</button>
           </Link>
         </li>
