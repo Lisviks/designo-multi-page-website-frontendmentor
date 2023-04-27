@@ -5,9 +5,7 @@ import 'leaflet-defaulticon-compatibility';
 import styles from '@/styles/locations/map.module.scss';
 
 interface Props {
-  line1: string;
-  line2: string;
-  line3: string;
+  address: { title: string; line1: string; line2: string };
   coords: { lat: number; long: number };
 }
 
@@ -27,9 +25,9 @@ export default function Map(props: Props) {
       />
       <Marker position={[props.coords.lat, props.coords.long]} draggable={false}>
         <Popup>
-          <p className={styles.address}>{props.line1}</p>
-          <p className={styles.address}>{props.line2}</p>
-          <p className={styles.address}>{props.line3}</p>
+          <p className={styles.address}>{props.address.title}</p>
+          <p className={styles.address}>{props.address.line1}</p>
+          <p className={styles.address}>{props.address.line2}</p>
         </Popup>
       </Marker>
     </MapContainer>
