@@ -1,7 +1,7 @@
 import styles from '@/styles/index/section2.module.scss';
-import PassionateSvg from './PassionateSvg';
-import ResourcefulSvg from './ResourcefulSvg';
-import FriendlySvg from './FriendlySvg';
+import PassionateSvg from '../svgs/PassionateSvg';
+import ResourcefulSvg from '../svgs/ResourcefulSvg';
+import FriendlySvg from '../svgs/FriendlySvg';
 
 export default function Section2() {
   return (

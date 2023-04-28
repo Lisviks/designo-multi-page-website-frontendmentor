@@ -5,9 +5,8 @@ import mobileWorldClassImg from '@/../public/assets/about/mobile/image-world-cla
 import desktopRealDealImg from '@/../public/assets/about/desktop/image-real-deal.jpg';
 import tabletRealDealImg from '@/../public/assets/about/tablet/image-real-deal.jpg';
 import mobileRealDealImg from '@/../public/assets/about/mobile/image-real-deal.jpg';
-import { StaticImageData } from 'next/image';
 
-const worldClassImages: StaticImageData[] = [desktopWorldClassImg, tabletWorldClassImg, mobileWorldClassImg];
-const realDealImages: StaticImageData[] = [desktopRealDealImg, tabletRealDealImg, mobileRealDealImg];
+const worldClassImages = [desktopWorldClassImg, tabletWorldClassImg, mobileWorldClassImg];
+const realDealImages = [desktopRealDealImg, tabletRealDealImg, mobileRealDealImg];
 
 export { worldClassImages, realDealImages };
