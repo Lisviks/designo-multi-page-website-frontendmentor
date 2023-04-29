@@ -10,6 +10,16 @@ export default function Form() {
   const [isMessageEmpty, setIsMessageEmpty] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(true);
 
+  const checkEmail = (email: string) => {
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (emailRegex.test(email)) {
+      setIsEmailValid(true);
+    } else {
+      setIsEmailValid(false);
+    }
+  };
+
   const handleChange = (
     e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
     setIsNameEmpty: Function
@@ -37,6 +47,8 @@ export default function Form() {
       message: { value: string };
     };
 
+    checkEmail(target.email.value);
+
     console.log(`Name: ${target.name.value}`);
     console.log(`Email: ${target.email.value}`);
     console.log(`Phone: ${target.phone.value}`);
@@ -62,7 +74,7 @@ export default function Form() {
         <div className={styles.input_field}>
           <input type='email' id='email' onChange={(e) => handleChange(e, setIsEmailEmpty)} required />
           <label htmlFor='email'>Email Address</label>
-          {isEmailEmpty && <ErrorMessage />}
+          {(isEmailEmpty && <ErrorMessage />) || (!isEmailValid && <ErrorMessage message='Invalid Email' />)}
         </div>
         <div className={styles.input_field}>
           <input type='text' id='phone' onChange={(e) => handleChange(e, setIsPhoneEmpty)} required />
@@ -83,10 +95,12 @@ export default function Form() {
   );
 }
 
-function ErrorMessage() {
+function ErrorMessage(props: { message?: string }) {
+  const { message = 'Can’t be empty' } = props;
+
   return (
     <span className={styles.error_message}>
-      Can’t be empty
+      {message}
       <Image src={errorIcon} alt='error icon' />
     </span>
   );
