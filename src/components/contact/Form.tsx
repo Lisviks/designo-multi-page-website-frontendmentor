@@ -1,59 +1,19 @@
 import styles from '@/styles/contact/form.module.scss';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
 import errorIcon from '@/../public/assets/contact/desktop/icon-error.svg';
+import { Field, Formik, Form, FormikHelpers, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
-export default function Form() {
-  const [isNameEmpty, setIsNameEmpty] = useState(false);
-  const [isEmailEmpty, setIsEmailEmpty] = useState(false);
-  const [isPhoneEmpty, setIsPhoneEmpty] = useState(false);
-  const [isMessageEmpty, setIsMessageEmpty] = useState(false);
-  const [isEmailValid, setIsEmailValid] = useState(true);
+interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
-  const checkEmail = (email: string) => {
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-    if (emailRegex.test(email)) {
-      setIsEmailValid(true);
-    } else {
-      setIsEmailValid(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>,
-    setIsNameEmpty: Function
-  ) => {
-    const target = e.target as typeof e.target & {
-      value: { length: number };
-      parentElement: HTMLDivElement;
-      id: string;
-    };
-
-    if (target.value.length < 1) {
-      setIsNameEmpty(true);
-    } else {
-      setIsNameEmpty(false);
-    }
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const target = e.target as typeof e.target & {
-      name: { value: string };
-      email: { value: string };
-      phone: { value: string };
-      message: { value: string };
-    };
-
-    checkEmail(target.email.value);
-
-    console.log(`Name: ${target.name.value}`);
-    console.log(`Email: ${target.email.value}`);
-    console.log(`Phone: ${target.phone.value}`);
-    console.log(`Message: ${target.message.value}`);
-  };
+export default function ContactForm() {
+  const initialValues: FormValues = { name: '', email: '', phone: '', message: '' };
+  const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   return (
     <section className={styles.form_section}>
@@ -65,38 +25,54 @@ export default function Form() {
           line.
         </p>
       </div>
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.input_field}>
-          <input type='text' id='name' onChange={(e) => handleChange(e, setIsNameEmpty)} required />
-          <label htmlFor='name'>Name</label>
-          {isNameEmpty && <ErrorMessage />}
-        </div>
-        <div className={styles.input_field}>
-          <input type='email' id='email' onChange={(e) => handleChange(e, setIsEmailEmpty)} required />
-          <label htmlFor='email'>Email Address</label>
-          {(isEmailEmpty && <ErrorMessage />) || (!isEmailValid && <ErrorMessage message='Invalid Email' />)}
-        </div>
-        <div className={styles.input_field}>
-          <input type='text' id='phone' onChange={(e) => handleChange(e, setIsPhoneEmpty)} required />
-          <label htmlFor='phone'>Phone</label>
-          {isPhoneEmpty && <ErrorMessage />}
-        </div>
-        <div className={styles.input_field}>
-          <textarea id='message' onChange={(e) => handleChange(e, setIsMessageEmpty)} required></textarea>
-          <label htmlFor='message'>Your Message</label>
-          {isMessageEmpty && <ErrorMessage />}
-        </div>
-        <button type='submit' className={styles.btn}>
-          Submit
-        </button>
-      </form>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={Yup.object({
+          name: Yup.string().required('Can’t be empty'),
+          email: Yup.string().required('Can’t be empty').matches(emailRegex, 'Invalid email'),
+          phone: Yup.string().required('Can’t be empty'),
+          message: Yup.string().required('Can’t be empty'),
+        })}
+        onSubmit={(values, { setSubmitting }: FormikHelpers<FormValues>) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 500);
+        }}
+      >
+        <Form className={styles.form}>
+          <div className={styles.input_field}>
+            <Field id='name' name='name' />
+            <label htmlFor='name'>Name</label>
+            <ErrorMessage name='name' render={(msg) => <Error message={msg} />} />
+          </div>
+          <div className={styles.input_field}>
+            <Field type='email' id='email' name='email' />
+            <label htmlFor='email'>Email Address</label>
+            <ErrorMessage name='email' render={(msg) => <Error message={msg} />} />
+          </div>
+          <div className={styles.input_field}>
+            <Field type='text' id='phone' name='phone' />
+            <label htmlFor='phone'>Phone</label>
+            <ErrorMessage name='phone' render={(msg) => <Error message={msg} />} />
+          </div>
+          <div className={styles.input_field}>
+            <Field id='message' name='message' as='textarea'></Field>
+            <label htmlFor='message'>Your Message</label>
+            <ErrorMessage name='message' render={(msg) => <Error message={msg} />} />
+          </div>
+          <button type='submit' className={styles.btn}>
+            Submit
+          </button>
+        </Form>
+      </Formik>
       <div className={styles.bg_pattern}></div>
     </section>
   );
 }
 
-function ErrorMessage(props: { message?: string }) {
-  const { message = 'Can’t be empty' } = props;
+function Error(props: { message: string }) {
+  const { message } = props;
 
   return (
     <span className={styles.error_message}>
