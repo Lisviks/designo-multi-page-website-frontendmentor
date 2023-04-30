@@ -72,6 +72,10 @@
             transform: translateY(-150%);
           }
         }
+
+        &:not(:placeholder-shown) ~ label {
+          transform: translateY(-150%);
+        }
       }
 
       textarea {
@@ -83,6 +87,10 @@
         }
 
         &:focus ~ label {
+          transform: translateY(-4rem);
+        }
+
+        &:not(:placeholder-shown) ~ label {
           transform: translateY(-4rem);
         }
 

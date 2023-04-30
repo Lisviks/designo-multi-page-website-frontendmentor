@@ -3,6 +3,7 @@ import Image from 'next/image';
 import errorIcon from '@/../public/assets/contact/desktop/icon-error.svg';
 import { Field, Formik, Form, FormikHelpers, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import React, { useEffect, useState } from 'react';
 
 interface FormValues {
   name: string;
@@ -12,6 +13,12 @@ interface FormValues {
 }
 
 export default function ContactForm() {
+  const [isNameEmpty, setIsNameEmpty] = useState(true);
+
+  useEffect(() => {
+    // const input;
+  });
+
   const initialValues: FormValues = { name: '', email: '', phone: '', message: '' };
   const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
@@ -42,22 +49,22 @@ export default function ContactForm() {
       >
         <Form className={styles.form}>
           <div className={styles.input_field}>
-            <Field id='name' name='name' />
+            <Field id='name' name='name' placeholder=' ' />
             <label htmlFor='name'>Name</label>
             <ErrorMessage name='name' render={(msg) => <Error message={msg} />} />
           </div>
           <div className={styles.input_field}>
-            <Field type='email' id='email' name='email' />
+            <Field type='email' id='email' name='email' placeholder=' ' />
             <label htmlFor='email'>Email Address</label>
             <ErrorMessage name='email' render={(msg) => <Error message={msg} />} />
           </div>
           <div className={styles.input_field}>
-            <Field type='text' id='phone' name='phone' />
+            <Field type='text' id='phone' name='phone' placeholder=' ' />
             <label htmlFor='phone'>Phone</label>
             <ErrorMessage name='phone' render={(msg) => <Error message={msg} />} />
           </div>
           <div className={styles.input_field}>
-            <Field id='message' name='message' as='textarea'></Field>
+            <Field id='message' name='message' as='textarea' placeholder=' '></Field>
             <label htmlFor='message'>Your Message</label>
             <ErrorMessage name='message' render={(msg) => <Error message={msg} />} />
           </div>
